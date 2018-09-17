@@ -1,4 +1,8 @@
 def reverse(text):
-    text_length = text.count()
+    string = ''
+    count = -1
     for letter in text:
-        
+        letter = text[count]
+        string += letter
+        count += -1
+        return string
