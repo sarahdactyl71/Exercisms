@@ -1,14 +1,3 @@
 def to_rna(dna_strand):
-    string = ''
-    if dna_strand == '':
-        return string
-    for char in dna_strand.split():
-        if char == 'G':
-            string += 'C'
-        elif char == 'C':
-            string += 'G'
-        elif char == 'T':
-            string += 'A'
-        elif char == 'A':
-            string += 'U'
-    return string
+    rna_strand = dna_strand.replace('G', 'C').replace('C', 'G').replace('T', 'A').replace('A', 'U')
+    return rna_strand
