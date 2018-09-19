@@ -22,6 +22,9 @@ class RnaTranscriptionTest(unittest.TestCase):
     def test_transcribes_adenine_to_uracil(self):
         self.assertEqual(to_rna('A'), 'U')
 
+    def test_transcribes_adenine_to_uracil(self):
+        self.assertEqual(to_rna('AC'), 'UG')
+
     def test_transcribes_all_occurrences(self):
         self.assertEqual(to_rna('ACGTGGTCTTAA'), 'UGCACCAGAAUU')
 
