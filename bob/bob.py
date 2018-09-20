@@ -1,5 +1,5 @@
 def hey(phrase):
-    if not phrase:
+    if not phrase or phrase.isspace():
         return "Fine. Be that way!"
     elif phrase[-1] == '?' and all_caps(phrase):
         return "Calm down, I know what I'm doing!"
