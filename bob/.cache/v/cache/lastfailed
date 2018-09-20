@@ -2,6 +2,5 @@
   "bob_test.py::BobTest::test_alternate_silence": true,
   "bob_test.py::BobTest::test_ending_with_whitespace": true,
   "bob_test.py::BobTest::test_other_whitespace": true,
-  "bob_test.py::BobTest::test_prolonged_silence": true,
-  "bob_test.py::BobTest::test_silence": true
+  "bob_test.py::BobTest::test_prolonged_silence": true
 }
