@@ -3,25 +3,25 @@ class SpaceAge(object):
         seconds = self.seconds
         earth_years = self.seconds / 31557600
 
-    def mercury(self, seconds):
+    def on_mercury(self, seconds):
         return earth_years / 0.2408467
 
-    def venus(self, seconds):
+    def on_venus(self, seconds):
         return earth_years / 0.61519726
 
-    def mars(self, seconds):
+    def on_mars(self, seconds):
         return earth_years / 1.8808158
 
-    def jupiter(self, seconds):
+    def on_jupiter(self, seconds):
         return earth_years / 11.862615
 
-    def saturn(self, seconds):
+    def on_saturn(self, seconds):
         return earth_years / 29.447498
 
-    def uranus(self, seconds):
+    def on_uranus(self, seconds):
         return earth_years / 84.016846
 
-    def neptune(self, seconds):
+    def on_neptune(self, seconds):
         return earth_years / 164.79132
 
 
