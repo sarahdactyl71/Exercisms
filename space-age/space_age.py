@@ -4,7 +4,7 @@ class SpaceAge(object):
         self.earth_years = seconds / 31557600
 
     def on_earth(self):
-        return self.makes_pretty(self.seconds)
+        return self.makes_pretty(1)
 
     def on_mercury(self):
         return self.makes_pretty(0.2408467)
