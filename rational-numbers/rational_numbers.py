@@ -27,10 +27,18 @@ class Rational(object):
         # is r1 - r2 = a1/b1 - a2/b2 = (a1 * b2 - a2 * b1) / (b1 * b2).
 
     def __mul__(self, other):
-        pass
+        numer = self.numer * other.numer
+        denom = self.denom * other.denom
+        return Rational(numer, denom)
+        # The product (multiplication) of two rational numbers r1 = a1/b1 and r2 = a2/b2
+        # is r1 * r2 = (a1 * a2) / (b1 * b2).
 
     def __truediv__(self, other):
-        pass
+        numer = self.numer * other.denom
+        denom = other.numer * self.denom
+        return Rational(numer, denom)
+        # Dividing a rational number r1 = a1/b1 by another r2 = a2/b2
+        # is r1 / r2 = (a1 * b2) / (a2 * b1) if a2 * b1 is not zero.
 
     def __abs__(self):
         numer = abs(self.numer)
@@ -49,9 +57,7 @@ class Rational(object):
 #
 #
 #
-# The product (multiplication) of two rational numbers r1 = a1/b1 and r2 = a2/b2 is r1 * r2 = (a1 * a2) / (b1 * b2).
 #
-# Dividing a rational number r1 = a1/b1 by another r2 = a2/b2 is r1 / r2 = (a1 * b2) / (a2 * b1) if a2 * b1 is not zero.
 #
 # Exponentiation of a rational number r = a/b to a non-negative integer power n is r^n = (a^n)/(b^n).
 #
