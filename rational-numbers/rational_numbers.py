@@ -16,9 +16,15 @@ class Rational(object):
         numer = self.numer * other.denom + other.numer * self.denom
         denom = self.denom * other.denom
         return Rational(numer, denom)
+        # The sum of two rational numbers r1 = a1/b1 and r2 = a2/b2
+        # is r1 + r2 = a1/b1 + a2/b2 = (a1 * b2 + a2 * b1) / (b1 * b2).
 
     def __sub__(self, other):
-        pass
+        numer = self.numer * other.denom - other.numer * self.denom
+        denom = self.denom * other.denom
+        return Rational(numer, denom)
+        # The difference of two rational numbers r1 = a1/b1 and r2 = a2/b2
+        # is r1 - r2 = a1/b1 - a2/b2 = (a1 * b2 - a2 * b1) / (b1 * b2).
 
     def __mul__(self, other):
         pass
@@ -27,7 +33,10 @@ class Rational(object):
         pass
 
     def __abs__(self):
-        pass
+        numer = abs(self.numer)
+        denom = abs(self.denom)
+        return Rational(numer, denom)
+        # The absolute value |r| of the rational number r = a/b is equal to |a|/|b|.
 
     def __pow__(self, power):
         pass
@@ -37,10 +46,8 @@ class Rational(object):
 
 # A rational number is defined as the quotient of two integers a and b, called the numerator and denominator, respectively, where b != 0.
 #
-# The absolute value |r| of the rational number r = a/b is equal to |a|/|b|.
 #
 #
-# The difference of two rational numbers r1 = a1/b1 and r2 = a2/b2 is r1 - r2 = a1/b1 - a2/b2 = (a1 * b2 - a2 * b1) / (b1 * b2).
 #
 # The product (multiplication) of two rational numbers r1 = a1/b1 and r2 = a2/b2 is r1 * r2 = (a1 * a2) / (b1 * b2).
 #
