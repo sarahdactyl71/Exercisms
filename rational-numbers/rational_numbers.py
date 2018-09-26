@@ -47,7 +47,10 @@ class Rational(object):
         # The absolute value |r| of the rational number r = a/b is equal to |a|/|b|.
 
     def __pow__(self, power):
-        pass
+         if power < 0:
+            self.numer, self.denom  = self.denom, self.numer
+            power = -power
+            return Rational(self.numer ** power, self.denom ** power)
 
     def __rpow__(self, base):
         pass

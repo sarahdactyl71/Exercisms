@@ -1,10 +1,8 @@
 {
-  "rational_numbers_test.py": true,
+  "rational_numbers_test.py::RationalNumbersTest": true,
   "rational_numbers_test.py::RationalNumbersTest::test_add_opposite": true,
-  "rational_numbers_test.py::RationalNumbersTest::test_divide_by_one": true,
   "rational_numbers_test.py::RationalNumbersTest::test_divide_positive_by_negative": true,
   "rational_numbers_test.py::RationalNumbersTest::test_divide_two_negative": true,
-  "rational_numbers_test.py::RationalNumbersTest::test_divide_two_positive": true,
   "rational_numbers_test.py::RationalNumbersTest::test_multiply_by_zero": true,
   "rational_numbers_test.py::RationalNumbersTest::test_multiply_negative_by_positive": true,
   "rational_numbers_test.py::RationalNumbersTest::test_multiply_reciprocal": true,
