@@ -13,7 +13,8 @@ class Rational(object):
         return '{}/{}'.format(self.numer, self.denom)
 
     def __add__(self, other):
-        pass
+        # The sum of two rational numbers r1 = a1/b1 and r2 = a2/b2 is r1 + r2 = a1/b1 + a2/b2 = (a1 * b2 + a2 * b1) / (b1 * b2).
+        return self.numer + self.demon and other.numer + other.denom
 
     def __sub__(self, other):
         pass
@@ -34,10 +35,9 @@ class Rational(object):
         pass
 
 # A rational number is defined as the quotient of two integers a and b, called the numerator and denominator, respectively, where b != 0.
-# 
+#
 # The absolute value |r| of the rational number r = a/b is equal to |a|/|b|.
 #
-# The sum of two rational numbers r1 = a1/b1 and r2 = a2/b2 is r1 + r2 = a1/b1 + a2/b2 = (a1 * b2 + a2 * b1) / (b1 * b2).
 #
 # The difference of two rational numbers r1 = a1/b1 and r2 = a2/b2 is r1 - r2 = a1/b1 - a2/b2 = (a1 * b2 - a2 * b1) / (b1 * b2).
 #
@@ -56,7 +56,14 @@ class Rational(object):
 # Implement the following operations:
 #
 # addition, subtraction, multiplication and division of two rational numbers,
-# absolute value, exponentiation of a given rational number to an integer power, exponentiation of a given rational number to a real (floating-point) power, exponentiation of a real number to a rational number.
-# Your implementation of rational numbers should always be reduced to lowest terms. For example, 4/4 should reduce to 1/1, 30/60 should reduce to 1/2, 12/8 should reduce to 3/2, etc. To reduce a rational number r = a/b, divide a and b by the greatest common divisor (gcd) of a and b. So, for example, gcd(12, 8) = 4, so r = 12/8 can be reduced to (12/4)/(8/4) = 3/2.
+# absolute value, exponentiation of a given rational number to an integer power,
+# exponentiation of a given rational number to a real (floating-point) power,
+# exponentiation of a real number to a rational number.
+# Your implementation of rational numbers should always be reduced to lowest
+# terms. For example, 4/4 should reduce to 1/1, 30/60 should reduce to 1/2, 12/8
+# should reduce to 3/2, etc. To reduce a rational number r = a/b, divide a and b
+# by the greatest common divisor (gcd) of a and b. So, for example, gcd(12, 8) = 4,
+# so r = 12/8 can be reduced to (12/4)/(8/4) = 3/2.
 #
-# Assume that the programming language you are using does not have an implementation of rational numbers.
+# Assume that the programming language you are using does not have an implementation
+# of rational numbers.
