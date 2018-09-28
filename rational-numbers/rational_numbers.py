@@ -4,7 +4,8 @@ from __future__ import division
 class Rational(object):
     def __init__(self, numer, denom):
         self.numer = numer
-        self.denom = denom
+        if denom != 0:
+            self.denom = denom
 
     def __eq__(self, other):
         return self.numer == other.numer and self.denom == other.denom
@@ -47,23 +48,30 @@ class Rational(object):
         # The absolute value |r| of the rational number r = a/b is equal to |a|/|b|.
 
     def __pow__(self, power):
-        pass
+        # Exponentiation of a rational number r = a/b to a non-negative integer
+        # power n is r^n = (a^n)/(b^n).
+        if power < 0:
+            power = -power
+            numer = denom ** power
+            denom = numer ** power
+            return Rational(numer, denom)
+        # Exponentiation of a rational number r = a/b to a negative integer
+        # power n is r^n = (b^m)/(a^m), where m = |n|.
+        elif isinstance(power, float):
+            numer = numer ** power
+            denom = denom ** power
+            return Rational(numer, denom)
+
+        else:
+            numer = numer ** power
+            denom = denom ** power
+            return Rational(numer, denom)
+        # Exponentiation of a rational number r = a/b to a real (floating-point)
+        # number x is the quotient (a^x)/(b^x), which is a real number.
 
     def __rpow__(self, base):
         pass
 
-# A rational number is defined as the quotient of two integers a and b, called the numerator and denominator, respectively, where b != 0.
-#
-#
-#
-#
-#
-#
-# Exponentiation of a rational number r = a/b to a non-negative integer power n is r^n = (a^n)/(b^n).
-#
-# Exponentiation of a rational number r = a/b to a negative integer power n is r^n = (b^m)/(a^m), where m = |n|.
-#
-# Exponentiation of a rational number r = a/b to a real (floating-point) number x is the quotient (a^x)/(b^x), which is a real number.
 #
 # Exponentiation of a real number x to a rational number r = a/b is x^(a/b) = root(x^a, b), where root(p, q) is the qth root of p.
 #
