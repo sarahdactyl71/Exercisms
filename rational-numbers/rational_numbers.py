@@ -52,19 +52,18 @@ class Rational(object):
         # power n is r^n = (a^n)/(b^n).
         if power < 0:
             power = -power
-            numer = denom ** power
-            denom = numer ** power
+            numer = self.denom ** power
+            denom = self.numer ** power
             return Rational(numer, denom)
         # Exponentiation of a rational number r = a/b to a negative integer
         # power n is r^n = (b^m)/(a^m), where m = |n|.
         elif isinstance(power, float):
-            numer = numer ** power
-            denom = denom ** power
+            numer = self.numer ** power
+            denom = self.denom ** power
             return Rational(numer, denom)
-
         else:
-            numer = numer ** power
-            denom = denom ** power
+            numer = self.numer ** power
+            denom = self.denom ** power
             return Rational(numer, denom)
         # Exponentiation of a rational number r = a/b to a real (floating-point)
         # number x is the quotient (a^x)/(b^x), which is a real number.
