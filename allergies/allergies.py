@@ -1,7 +1,7 @@
 class Allergies(object):
 
     def __init__(self, score):
-        pass
+        self.score = score
 
     def is_allergic_to(self, item):
         pass
