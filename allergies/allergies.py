@@ -10,9 +10,11 @@ class Allergies(object):
     def lst(self):
         pass
 
-# Given a person's allergy score, determine whether or not they're allergic to a given item, and their full list of allergies.
+# Given a person's allergy score, determine whether or not they're allergic to a
+# given item, and their full list of allergies.
 #
-# An allergy test produces a single numeric score which contains the information about all the allergies the person has (that they were tested for).
+# An allergy test produces a single numeric score which contains the information
+# about all the allergies the person has (that they were tested for).
 #
 # The list of items (and their value) that were tested are:
 #
