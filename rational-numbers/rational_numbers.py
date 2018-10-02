@@ -21,46 +21,33 @@ class Rational(object):
         numer = self.numer * other.denom + other.numer * self.denom
         denom = self.denom * other.denom
         return Rational(numer, denom)
-        # The sum of two rational numbers r1 = a1/b1 and r2 = a2/b2
-        # is r1 + r2 = a1/b1 + a2/b2 = (a1 * b2 + a2 * b1) / (b1 * b2).
 
     def __sub__(self, other):
         numer = self.numer * other.denom - other.numer * self.denom
         denom = self.denom * other.denom
         return Rational(numer, denom)
-        # The difference of two rational numbers r1 = a1/b1 and r2 = a2/b2
-        # is r1 - r2 = a1/b1 - a2/b2 = (a1 * b2 - a2 * b1) / (b1 * b2).
 
     def __mul__(self, other):
         numer = self.numer * other.numer
         denom = self.denom * other.denom
         return Rational(numer, denom)
-        # The product (multiplication) of two rational numbers r1 = a1/b1 and r2 = a2/b2
-        # is r1 * r2 = (a1 * a2) / (b1 * b2).
 
     def __truediv__(self, other):
         numer = self.numer * other.denom
         denom = other.numer * self.denom
         return Rational(numer, denom)
-        # Dividing a rational number r1 = a1/b1 by another r2 = a2/b2
-        # is r1 / r2 = (a1 * b2) / (a2 * b1) if a2 * b1 is not zero.
 
     def __abs__(self):
         numer = abs(self.numer)
         denom = abs(self.denom)
         return Rational(numer, denom)
-        # The absolute value |r| of the rational number r = a/b is equal to |a|/|b|.
 
     def __pow__(self, power):
-        # Exponentiation of a rational number r = a/b to a non-negative integer
-        # power n is r^n = (a^n)/(b^n).
         if power < 0:
             power = -power
             numer = self.denom ** power
             denom = self.numer ** power
             return Rational(numer, denom)
-        # Exponentiation of a rational number r = a/b to a negative integer
-        # power n is r^n = (b^m)/(a^m), where m = |n|.
         elif isinstance(power, float):
             numer = self.numer ** power
             denom = self.denom ** power
@@ -69,8 +56,6 @@ class Rational(object):
             numer = self.numer ** power
             denom = self.denom ** power
             return Rational(numer, denom)
-        # Exponentiation of a rational number r = a/b to a real (floating-point)
-        # number x is the quotient (a^x)/(b^x), which is a real number.
-
+    
     def __rpow__(self, base):
         return base ** (self.numer / self.denom)
