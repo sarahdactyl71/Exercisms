@@ -36,3 +36,13 @@ class Allergies(object):
 # that score 256, 512, 1024, etc.). Your program should ignore those components
 # of the score. For example, if the allergy score is 257, your program should only
 # report the eggs (1) allergy.
+allergens_dict = {
+    "eggs": 1,
+    "peanuts": 2,
+    "shellfish": 4,
+    "strawberries": 8,
+    "tomatoes": 16,
+    "chocolate": 32,
+    "pollen": 64,
+    "cats": 128 
+}
