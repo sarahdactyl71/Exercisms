@@ -3,8 +3,13 @@ from __future__ import division
 
 class Rational(object):
     def __init__(self, numer, denom):
-        self.numer = numer
-        self.denom = denom
+        gcd, b = sorted([numer, denom])
+        while b != 0:
+            gcd, b = b, gcd % b
+        if denom < 0 < gcd:
+            gcd = -gcd
+        self.numer = numer // gcd
+        self.denom = denom // gcd
 
     def __eq__(self, other):
         return self.numer == other.numer and self.denom == other.denom
@@ -68,7 +73,7 @@ class Rational(object):
         # number x is the quotient (a^x)/(b^x), which is a real number.
 
     def __rpow__(self, base):
-        pass
+        return base ** (self.numer / self.denom)
 
 #
 # Exponentiation of a real number x to a rational number r = a/b is x^(a/b) = root(x^a, b), where root(p, q) is the qth root of p.
